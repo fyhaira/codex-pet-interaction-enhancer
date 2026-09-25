@@ -1,0 +1,10 @@
+# Generated for the dependency-free developer preview.
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}

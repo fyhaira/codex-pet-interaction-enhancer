@@ -1,0 +1,24 @@
+{
+  "formatVersion": 1,
+  "id": "codex-desktop-26.915.31945-build-9922-macos-arm64",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "codexVersion": "26.915.31945",
+  "buildNumber": "9922",
+  "transformProfile": "26.915.31945-build-9922",
+  "source": {
+    "asarPath": "Contents/Resources/app.asar",
+    "asarSha256": "1f7939c1c781887c167043c4d1d307af3400d324685cfc315dfe2f80e634f483",
+    "infoPlistSha256": "c2fb3359c596b749c548766c6a9b5a643511be08f43a98504de2a5586a385626",
+    "executableSha256": "dfe5654498e939d355702fa66e6e2400e55ec0ade61048e19e264f4bdc70b847"
+  },
+  "targets": {
+    ".vite/build/main-DUHZj4_w.js": {"sha256":"9e8a3bd79c817064f28693ca26aa1378895e07ab2108c78c42d0ea20dac9d66e","requiredSnippets":[{"label":"proximity method start","value":"updateCssPetControlsProximityTracking(){","count":1},{"label":"proximity method boundary","value":"setPetPointerProximity(e){","count":1},{"label":"physical cursor API","value":"l.screen.getCursorScreenPoint()","count":17},{"label":"Computer Use renderer message","value":"avatar-overlay-computer-use-cursor-changed","count":1}]},
+    "webview/assets/app-initial-a498f911edeb.js": {"sha256":"34a75db63c7137eb4caecdba1f36d631c10c7912487e532fd5e9dafb175bb9be","requiredSnippets":[{"label":"V2 atlas contract","value":"version:2,width:1536,height:2288,cellWidth:192,cellHeight:208,columns:8,rows:11","count":1},{"label":"bounded planner","value":"let r=[...n,...n,...n];return{frames:[...r,...XXc],loopStartIndex:r.length}","count":1},{"label":"V2 direction contract","value":"sZc=22.5,cZc=16,lZc=9,uZc=8,dZc=1","count":1},{"label":"compiled mascot renderer","value":"iZc=({assetMap:e,className:t,lookFrame:n,respondToHover:r=!1,source:i,state:a=`idle`})=>{\"use forget\";","count":1}]},
+    "webview/assets/avatar-mascot-button-171f2736a391.js": {"sha256":"826f2fdde13849f68f977d972c78ebe992fdd4a8cebce622e806277172f505c8","requiredSnippets":[{"label":"mascot component","value":"function le(e){let t=(0,de.c)(20),","count":1},{"label":"hover semantic eligibility","value":"re=p===`idle`||p===`running`||p===`waving`","count":1},{"label":"original hover priority","value":"let b=re?a:null,x;","count":1}]},
+    "webview/assets/avatar-overlay-native-page-34cd5ae3858a.js": {"sha256":"350a0e48425ea6e71636842a2f680d54e39acefeb70760fa8702fa8a8be8955f","requiredSnippets":[{"label":"gaze precedence","value":"Tn=(en&&Ye&&dt?It:null)??w?.caretPoint??Pt","count":1},{"label":"mascot invocation","value":"lookFrame:qn,notificationBadge:$t||Gn?void 0:Hr,source:zr(c),state:yt.mascotState","count":1},{"label":"local unread lifecycle","value":"e.hasUnreadTurn?`review`:`idle`","count":1},{"label":"remote unread lifecycle","value":"e.has_unread_turn?`review`:`idle`","count":1}]},
+    "webview/assets/remote-conversation-page-a1b7d8380958.js": {"sha256":"0f2a7d02c5136872ea9913ebb3a3a4c114030ab918eb7348b189378e6123e82e","requiredSnippets":[{"label":"unread acknowledgement input","value":"d?.task.has_unread_turn?d.task.id:null","count":1}]}
+  },
+  "petRuntimeContract":{"v1Rows":9,"v2Rows":11,"cellWidth":192,"cellHeight":208,"lookRows":[9,10],"lookDirections":16,"directionStepDegrees":22.5,"optionalSleepAsset":"separate horizontal PNG strip"},
+  "supportedFeatures":["pointer-gaze","durable-states","sleep"]
+}

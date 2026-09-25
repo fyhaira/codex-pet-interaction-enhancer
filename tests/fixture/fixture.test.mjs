@@ -1,0 +1,3 @@
+import assert from"node:assert/strict";import fs from"node:fs";import path from"node:path";import test from"node:test";import{fileURLToPath}from"node:url";const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"../.."),dir=path.join(root,"fixtures/generic-v2-debug-pet"),dim=p=>{const b=fs.readFileSync(p);return[b.readUInt32BE(16),b.readUInt32BE(20)]};
+test("fixture implements the 8x11 V2 contract",()=>{assert.deepEqual(dim(path.join(dir,"spritesheet.png")),[1536,2288]);assert.equal(JSON.parse(fs.readFileSync(path.join(dir,"pet.json"))).spriteVersionNumber,2)});
+test("optional sleep strip is eight 192x208 frames",()=>assert.deepEqual(dim(path.join(dir,"sleep-strip.png")),[1536,208]));

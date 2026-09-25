@@ -1,0 +1,9 @@
+{
+  "formatVersion": 1,
+  "features": {
+    "pointerGaze": {"enabled": true, "hoverPriority": "gaze", "enterRadiusPx": 220, "exitHysteresisPx": 40, "sectorHysteresisDegrees": 4},
+    "durableStates": {"enabled": true, "states": ["running", "review"]},
+    "sleep": {"enabled": false}
+  },
+  "petCapabilities": {}
+}

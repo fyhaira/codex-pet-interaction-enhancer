@@ -1,0 +1,7 @@
+import assert from"node:assert/strict";import test from"node:test";import{computeGaze,rendererFrameForPoint}from"../../src/model/gaze.mjs";const mascot={left:400,top:300,width:80,height:80},origin={x:440,y:340},point=(d,r=150)=>({x:origin.x+Math.sin(d*Math.PI/180)*r,y:origin.y-Math.cos(d*Math.PI/180)*r});
+test("all 16 V2 sectors map to rows 9-10",()=>{for(let s=0;s<16;s++)assert.deepEqual(rendererFrameForPoint(mascot,point(s*22.5),2),{columnIndex:s%8,frameDurationMs:0,rowIndex:9+Math.floor(s/8)})});
+test("V1 falls back",()=>assert.equal(rendererFrameForPoint(mascot,point(90),1),null));
+test("gaze uses visual centre and remains active through hover",()=>assert.equal(computeGaze({cursor:{x:450,y:340},mascot}).sector,4));
+test("hover jumping is an explicit fallback",()=>assert.equal(computeGaze({cursor:origin,mascot,options:{gazeOverridesHover:false}}).reason,"inner-hover-zone"));
+test("enter and exit radii differ",()=>{assert.equal(computeGaze({cursor:point(0,225),mascot}).active,false);assert.equal(computeGaze({cursor:point(0,225),mascot,previousActive:true,previousSector:0}).active,true);assert.equal(computeGaze({cursor:point(0,261),mascot,previousActive:true,previousSector:0}).active,false)});
+test("sector hysteresis prevents boundary flicker",()=>{assert.equal(computeGaze({cursor:point(12),mascot,previousActive:true,previousSector:0}).sector,0);assert.equal(computeGaze({cursor:point(15.5),mascot,previousActive:true,previousSector:0}).sector,1)});

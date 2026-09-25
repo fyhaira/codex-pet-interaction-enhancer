@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "id": "codex-desktop-26.908.40834-build-8881-macos-arm64",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "codexVersion": "26.908.40834",
+  "buildNumber": "8881",
+  "transformProfile": "26.908.40834-build-8881",
+  "source": {
+    "asarPath": "Contents/Resources/app.asar",
+    "asarSha256": "bb40cd8811887363104a19291346af9595632e0e956316a1086b274fb8e3eafc",
+    "infoPlistSha256": "92c535a34a8c1ba08e9fa1825807f348348c2f5c13a9e2e822098e75ed279e0b",
+    "executableSha256": "83750779e2f5a040cc05f6b05486e3bfa371ff19cb9edcd6102140b369c67683"
+  },
+  "targets": {
+    ".vite/build/main-DaMR-wdT.js": {"sha256":"0765260be74e8843630d5a92e30bca574783892688e67180c119a5c58679bb61","requiredSnippets":[{"label":"proximity method start","value":"updateCssPetControlsProximityTracking(){","count":1},{"label":"proximity method boundary","value":"setPetPointerProximity(e){","count":1}]},
+    "webview/assets/app-initial-9b95fa538c62.js": {"sha256":"737070f94a072d2b4ede9f326e3e1c4142fb82198961251c2e70479b3f926275","requiredSnippets":[{"label":"standard row contract","value":"failed:i4(5,8,140,240)","count":1},{"label":"bounded animation planner","value":"let r=[...n,...n,...n];return{frames:[...r,...Ylo],loopStartIndex:r.length}","count":1},{"label":"V2 gaze contract","value":"ouo=22.5,suo=16,cuo=9,luo=8,uuo=1","count":1}]},
+    "webview/assets/avatar-mascot-button-c97748e2485e.js": {"sha256":"ee33fdf319c66b74b467ae7927fe7948b4a59014c4015c82f63d3ad9378ba227","requiredSnippets":[{"label":"hover eligibility","value":"re=f===`idle`||f===`running`||f===`waving`","count":1},{"label":"original hover priority","value":"let b=re?ee:null,x;","count":1}]},
+    "webview/assets/avatar-overlay-native-page-bb89afb2a8f6.js": {"sha256":"9ddf6ce3bb7a6b2276d2b598afc3bb14f3424e5b4d1bb452378d5fbe0dfa5f49","requiredSnippets":[{"label":"mascot invocation","value":"notificationBadge:It||Tn?void 0:br,source:Kr(c),state:vt.mascotState","count":1}]}
+  },
+  "petRuntimeContract":{"v1Rows":9,"v2Rows":11,"cellWidth":192,"cellHeight":208,"lookRows":[9,10],"lookDirections":16,"directionStepDegrees":22.5,"optionalSleepAsset":"separate horizontal PNG strip"},
+  "supportedFeatures":["pointer-gaze","durable-states","sleep"]
+}

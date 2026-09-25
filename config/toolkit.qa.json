@@ -1,0 +1,11 @@
+{
+  "formatVersion": 1,
+  "features": {
+    "pointerGaze": {"enabled": true, "hoverPriority": "gaze", "enterRadiusPx": 220, "exitHysteresisPx": 40, "sectorHysteresisDegrees": 4},
+    "durableStates": {"enabled": true, "states": ["running", "review"]},
+    "sleep": {"enabled": true}
+  },
+  "petCapabilities": {
+    "generic-v2-debug-pet": {"sleep": {"enabled": true, "inactivityMs": 8000, "assetPath": "../fixtures/generic-v2-debug-pet/sleep-strip.png", "frameWidth": 192, "frameHeight": 208, "frameCount": 8, "frameDurationMs": 420, "loop": true}}
+  }
+}

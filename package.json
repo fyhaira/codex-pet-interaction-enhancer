@@ -1,0 +1,20 @@
+{
+  "name": "codex-pet-runtime-toolkit",
+  "version": "0.1.0-dev-preview",
+  "private": true,
+  "type": "module",
+  "description": "Experimental, fail-closed runtime enhancements for copied Codex Desktop apps",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "node --test tests/unit/*.test.mjs tests/fixture/*.test.mjs tests/compatibility/*.test.mjs tests/integration/*.test.mjs",
+    "fixture:generate": "node scripts/generate-debug-fixture.mjs",
+    "fixture:verify": "node scripts/verify-debug-fixture.mjs",
+    "config:check": "node scripts/validate-config.mjs",
+    "audit": "node scripts/audit-public-repo.mjs",
+    "manifest:check": "node scripts/verify-public-files.mjs",
+    "check": "node scripts/verify-debug-fixture.mjs && node scripts/validate-config.mjs && node --test tests/unit/*.test.mjs tests/fixture/*.test.mjs tests/compatibility/*.test.mjs tests/integration/*.test.mjs && node scripts/verify-public-files.mjs && node scripts/audit-public-repo.mjs",
+    "build:production": "node src/cli/build.mjs --config config/toolkit.production.json",
+    "build:qa": "node src/cli/build.mjs --config config/toolkit.qa.json"
+  },
+  "engines": { "node": ">=20" }
+}

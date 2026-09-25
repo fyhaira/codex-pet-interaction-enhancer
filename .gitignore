@@ -1,0 +1,36 @@
+# Toolkit-created applications and local state
+/local/*
+!/local/.gitkeep
+*.app/
+*.asar
+*.asar.unpacked/
+*checkpoint*/
+*rollback*/
+*profile*/
+
+# Dependencies and build/test output
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.pytest_cache/
+test-results/
+reports/
+*.log
+
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+*.local.json
+*.pem
+*.p12
+
+# Editors, macOS, temporary files
+.DS_Store
+.Rhistory
+._*
+*.swp
+*.tmp
+*~
