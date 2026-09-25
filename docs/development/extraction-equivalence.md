@@ -1,6 +1,6 @@
 # Public extraction equivalence
 
-The public repository was extracted selectively from the accepted private Phase 3 toolkit.
+The public repository was extracted selectively from the accepted private Phase 3 runtime implementation.
 
 - `durable-states`: applying private and public transforms to the frozen Phase 1 bundle produced byte-identical target output.
 - `sleep`: applying the private full-preimage transform and public counted-fragment transform to the frozen Phase 2 bundle with identical generic capability data produced byte-identical output for all three target entries.

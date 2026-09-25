@@ -3,7 +3,7 @@
 The repository contains no raw extracted bundle or executable. Compatibility still requires small source-derived selectors:
 
 - the durable planner replaces one minified function (about 270 source characters);
-- pointer gaze uses two method-boundary names and one short hover expression, replacing the method body with original toolkit code;
+- pointer gaze uses two method-boundary names and one short hover expression, replacing the method body with original enhancer code;
 - sleep uses six short renderer fragments, nine component fragments, and one overlay property fragment;
 - the manifest stores four target-entry hashes and short counted structural fingerprints.
 

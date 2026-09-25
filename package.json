@@ -1,10 +1,10 @@
 {
-  "name": "codex-pet-runtime-toolkit",
+  "name": "codex-pet-interaction-enhancer",
   "version": "0.1.0-dev-preview",
   "private": true,
   "type": "module",
-  "description": "Experimental, fail-closed runtime enhancements for copied Codex Desktop apps",
-  "license": "Apache-2.0",
+  "description": "Source-available interaction enhancements for Codex desktop pets on macOS",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "test": "node --test tests/unit/*.test.mjs tests/fixture/*.test.mjs tests/compatibility/*.test.mjs tests/integration/*.test.mjs",
     "fixture:generate": "node scripts/generate-debug-fixture.mjs",

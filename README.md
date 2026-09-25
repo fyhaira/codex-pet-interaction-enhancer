@@ -1,10 +1,10 @@
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-# Codex Pet Runtime Toolkit
+# Codex Pet Interaction Enhancer
 
 > **Developer Preview / Experimental** — validated only with the listed Codex Desktop builds on **macOS arm64**.
 
-Enhance Codex desktop pets with physical pointer gaze, persistent semantic animations, and inactivity sleep—while keeping the primary Codex.app untouched.
+Make Codex desktop pets feel more alive with physical pointer gaze, persistent task/review animations, and inactivity sleep—while keeping the primary Codex.app untouched.
 
 ## What it adds
 
@@ -14,7 +14,7 @@ Enhance Codex desktop pets with physical pointer gaze, persistent semantic anima
 | Persistent Semantic States | Loops only `running` and `review` while Codex keeps those semantic states active. All other animations retain their bounded behaviour. |
 | Inactivity / Sleep | Optionally layers a separate looping sleep strip over strict idle. Passive hover, gaze, pointer movement, and window focus neither reset inactivity nor wake; pet pointer-down, drag, and meaningful semantic work wake immediately. |
 
-The toolkit connects signals Codex already owns rather than replacing its semantic state machine or V2 atlas contract. See [design decisions](docs/design-decisions/runtime-capabilities.md).
+The enhancer connects signals Codex already owns rather than replacing its semantic state machine or V2 atlas contract. See [design decisions](docs/design-decisions/runtime-capabilities.md).
 
 ## Safety first
 
@@ -64,7 +64,7 @@ Details: [compatibility](docs/compatibility.md).
 
 ## Verify and revert
 
-Run `npm run check` before every build or release review. Previous experimental copies are retained under ignored `local/rollback/`; restore one with `node src/cli/rollback.mjs <rollback-app-path>`. Deleting `local/` removes toolkit-created apps, profiles, reports, and rollbacks without touching the installed source app.
+Run `npm run check` before every build or release review. Previous experimental copies are retained under ignored `local/rollback/`; restore one with `node src/cli/rollback.mjs <rollback-app-path>`. Deleting `local/` removes enhancer-created apps, profiles, reports, and rollbacks without touching the installed source app.
 
 ## Known limitation: mixed-display dragging
 
@@ -72,8 +72,8 @@ Fast/long drag glitches also reproduced with a built-in pet in unmodified Codex.
 
 ## Project status
 
-This is source for technical review, not a one-click installer, universal-compatibility release, notarized distribution, or production-ready product. Broader compatibility, packaging, and optional interactions remain future work.
+This is a source-available developer preview for technical review, not a one-click installer, universal-compatibility release, notarized distribution, or production-ready product. Broader compatibility, packaging, and optional interactions remain future work.
 
-The toolkit's original code and documentation are licensed under [Apache-2.0](LICENSE). That license does not grant rights over Codex/OpenAI software or third-party pet assets; users remain responsible for artwork and assets they install. See [licensing](docs/legal/licensing.md).
+Current versions of this repository's original code and documentation are available under the [Codex Pet Interaction Enhancer Personal Use License 1.0](LICENSE). Personal, non-commercial use and private local customization are permitted; redistribution, repackaging, publication of modified versions, and commercial use are not. Codex/OpenAI software is not distributed or licensed by this project. Third-party pet artwork and future fandom packages may have separate terms, and users remain responsible for rights to assets they install. See [licensing](docs/legal/licensing.md).
 
 Contributions should begin with [CONTRIBUTING.md](CONTRIBUTING.md). Security-sensitive reports belong in [SECURITY.md](SECURITY.md).

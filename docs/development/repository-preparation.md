@@ -15,6 +15,6 @@ Prepared as a clean developer-preview candidate from an accepted private runtime
 
 Copied or patched applications, executables, raw vendor bundles, profiles, checkpoints, rollback apps, raw traces, screenshots, machine evidence, private creative history, private pet assets/config, caches, and credentials are absent. Local integration artifacts belong only in ignored `local/`.
 
-## Publication decisions
+## Initial publication decision
 
-The owner selected Apache-2.0. The standard license is present at the repository root, package metadata uses the matching SPDX identifier, and the vendor-derived selector inventory remains available for review. Security reports use GitHub's private reporting mechanism when enabled; no private email address is published.
+The initial Developer Preview commit was published under Apache-2.0. A later normal commit moved current and future versions to the project's Personal Use License without rewriting that history. See [licensing](../legal/licensing.md). The vendor-derived selector inventory remains available for review. Security reports use GitHub's private reporting mechanism; no private email address is published.

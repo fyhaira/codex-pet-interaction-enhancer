@@ -1,10 +1,12 @@
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-# Codex Pet Runtime Toolkit
+# Codex 桌宠互动扩展
+
+> **让 Codex 桌宠更灵动。**
 
 > **开发者预览 / 实验性项目** — 目前仅验证下表所列的 Codex Desktop 版本，平台为 **macOS arm64**。
 
-在不修改主 Codex.app 的前提下，为桌面宠物增加物理指针注视、持续语义动画与闲置睡眠。
+鼠标移动时，桌宠会看向不同方向；Codex 工作、思考或等待查阅结果时，对应动画可以持续播放；长时间闲置时，桌宠会自然进入睡眠。整个过程不修改主 Codex.app。
 
 ## 已实现能力
 
@@ -14,7 +16,7 @@
 | 持续语义状态 | 仅当 Codex 的语义状态仍为 `running` 或 `review` 时循环对应完整动画；其他状态继续保持有限时长。 |
 | 闲置 / 睡眠 | 可选地在“严格空闲”上叠加独立睡眠动画。被动移动、悬停、注视及窗口聚焦不会重置计时或唤醒；直接按下宠物、拖动或新的语义工作会立即唤醒。 |
 
-工具包复用 Codex 已有的状态与 V2 图集契约，而不另造语义状态机。详见[设计决策](docs/design-decisions/runtime-capabilities.md)。
+本扩展复用 Codex 已有的状态与 V2 图集契约，而不另造语义状态机。详见[设计决策](docs/design-decisions/runtime-capabilities.md)。
 
 ## 安全模型
 
@@ -53,8 +55,8 @@ npm run build:production
 
 ## 已知限制
 
-快速或长距离拖动故障也能在未修改 Codex 的内置宠物上复现。一次采样中 13/13 次原生交接均为 `started=true`，最明确的失败发生在交接之后。测试机器的内置屏幕看似稳定，而扩展大屏会出现问题，因此混合屏幕缩放/坐标空间是更强的当前假设，但并非普遍结论。本工具包未加入规避补丁。详见[已知限制](docs/troubleshooting/known-limitations.md)。
+快速或长距离拖动故障也能在未修改 Codex 的内置宠物上复现。一次采样中 13/13 次原生交接均为 `started=true`，最明确的失败发生在交接之后。测试机器的内置屏幕看似稳定，而扩展大屏会出现问题，因此混合屏幕缩放/坐标空间是更强的当前假设，但并非普遍结论。本扩展未加入规避补丁。详见[已知限制](docs/troubleshooting/known-limitations.md)。
 
-本项目仍是技术评审用开发者预览，不是单击安装器、通用兼容正式发布或经公证的商用品。
+本项目是 source-available（源码可查看）的技术评审用开发者预览，不是单击安装器、通用兼容正式发布或经公证的商用品，也不是 OSI 定义的开源项目。
 
-本工具包的原创代码与文档采用 [Apache-2.0](LICENSE) 许可证。该许可证不授予对 Codex/OpenAI 软件或第三方宠物素材的权利；用户须自行确保有权使用其安装的美术与素材。详见[许可证说明](docs/legal/licensing.md)。
+当前版本的原创代码与文档采用 [Codex Pet Interaction Enhancer Personal Use License 1.0](LICENSE)。个人非商业使用、安装和私下本地修改均被允许；禁止商业使用、再分发、重新打包及公开发布修改版本。本项目不分发或许可 Codex/OpenAI 软件；第三方桌宠素材与未来角色向项目可能采用单独条款，用户须自行确保有权使用其安装的美术与素材。详见[许可证说明](docs/legal/licensing.md)。
