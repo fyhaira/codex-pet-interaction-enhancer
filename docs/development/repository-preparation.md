@@ -4,10 +4,10 @@ Prepared as a clean developer-preview candidate from an accepted private runtime
 
 ## Verification
 
-- 35 tests pass in the public suite; three source-app integration checks skip when their exact supported source build is unavailable.
+- 41 tests pass in the current public suite when build 11431 source/candidate integration is available; two historical source-app transform checks skip because their exact 9922/10789 source builds are unavailable locally.
 - Fixture: 1536×2288 V2 atlas and 1536×208 optional sleep strip validated.
 - Configuration: production 180 seconds, QA 8 seconds, and 120/180/300/600-second data-only variants validated.
-- Public-file allowlist: 80 intended files, including independent manifests and feature-local transform profiles for builds 8881, 9922, and 10789.
+- Public-file allowlist: 88 intended files, including independent manifests and feature-local transform profiles for builds 8881, 9922, 10789, and 11431.
 - Leakage audit: passed for private paths/identifiers, personal email, common secret forms, app bundles, ASARs, raw logs, unexpected binaries, and files over 5 MiB.
 - Transform equivalence: durable and sleep outputs byte-identical to accepted transforms for identical inputs; pointer-gaze behaviour equivalent through deterministic coverage.
 

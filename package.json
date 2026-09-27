@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Source-available interaction enhancements for Codex desktop pets on macOS",
   "license": "SEE LICENSE IN LICENSE",
+  "packageManager": "pnpm@11.25.0",
   "scripts": {
     "test": "node --test tests/unit/*.test.mjs tests/fixture/*.test.mjs tests/compatibility/*.test.mjs tests/integration/*.test.mjs",
     "fixture:generate": "node scripts/generate-debug-fixture.mjs",
@@ -16,5 +17,10 @@
     "build:production": "node src/cli/build.mjs --config config/toolkit.production.json",
     "build:qa": "node src/cli/build.mjs --config config/toolkit.qa.json"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "@electron/asar": "4.1.0"
+  }
 }

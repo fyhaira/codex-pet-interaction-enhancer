@@ -35,9 +35,10 @@ No Codex application, executable, vendor bundle, user profile, or patched build 
 
 ## Developer-preview quick start
 
-Prerequisites: the validated Codex build, macOS arm64, Node.js 20+, and a clean checkout.
+Prerequisites: the validated Codex build, macOS arm64, Node.js 22.12+, pnpm 11, and a clean checkout. `@electron/asar` is pinned as a build-time dependency for deterministic ASAR-header and Electron 41+ embedded-integrity handling.
 
 ```sh
+pnpm install --frozen-lockfile
 npm run check
 npm run build:production
 ./scripts/launch.sh
@@ -54,6 +55,7 @@ The compatibility manifest checks platform, architecture, version, build, full a
 | Codex 26.908.40834 / build 8881 / macOS arm64 | Supported developer preview |
 | Codex 26.915.31945 / build 9922 / macOS arm64 | Supported developer preview |
 | Codex 26.917.62051 / build 10789 / macOS arm64 | Supported developer preview; automated and live Phase 1–3 validation complete |
+| Codex 26.924.20706 / build 11431 / macOS arm64 | Supported developer preview; automated validation and private 20/20 live behavioral acceptance complete |
 | Any other version, build, platform, or architecture | Unsupported; fail closed |
 
 Details: [compatibility](docs/compatibility.md).
